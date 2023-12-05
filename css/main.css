@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+}
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0px;
+}
+.logo{
+    display: flex;
+    color: #CFA57B;
+    align-items: center;
+    gap: 3px;
+}
+.logo h1{
+    font-family: 'Times New Roman', Times, serif;
+
+}
+nav .mode{
+    background: url(../images/svg/moon-icon.svg);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.bg img{
+    width: 100%;
+    height: 140px;
+    position: absolute;
+    z-index: -99;
+    object-fit: cover;
+}
+.bg h1{
+    color: white;
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 120px;
+}
+form{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+form input{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #CFA57B;
+    padding: 10px;
+    padding-right: 150px;
+    padding-left: 40px;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, 0.278);
+    background: url(../images/svg/user-search.svg);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: 3px 3px;
+    color: #CFA57B;
+
+}
+form input::placeholder{
+    color: #CFA57B;
+    font-weight: 700;
+    letter-spacing: 0.9px ;
+}
+body.active form input{
+    color: #CFA57B;
+}
+form button{
+    padding: 0px 20px;
+    border: none;
+    color: white;
+    font-weight: 700;
+    background-color: #CFA57B;
+    font-size: 16px;
+    cursor: pointer;
+}
+form{
+    margin-bottom: 70px;
+}
+.boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+.box{
+    width: 300px;
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.182);
+    text-align: center;
+    padding: 20px 0px;
+    position: relative;
+}
+.box p{
+    margin-bottom: 8px;
+}
+.box img{
+    border-radius: 50%;
+}
+body.active{
+    background-color: #282F37;
+}
+body.active .box{
+    color: #CFA57B;
+}
+body.active .mode{
+    background: url(../images/svg/sun-icon.svg);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+body.active button{
+    color: black;
+}
+body{
+    transition: all .3s ease;
+}
+.trash{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 19px;
+    cursor: pointer;
+    display: none;
+}
+.hidden{
+    display: none;
+}
+.main_modal{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.63);
+    display: none;
+}
+.main_modal
+.lds-roller {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-roller div {
+    animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    transform-origin: 40px 40px;
+  }
+  .lds-roller div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: #fff;
+    margin: -4px 0 0 -4px;
+  }
+  .lds-roller div:nth-child(1) {
+    animation-delay: -0.036s;
+  }
+  .lds-roller div:nth-child(1):after {
+    top: 63px;
+    left: 63px;
+  }
+  .lds-roller div:nth-child(2) {
+    animation-delay: -0.072s;
+  }
+  .lds-roller div:nth-child(2):after {
+    top: 68px;
+    left: 56px;
+  }
+  .lds-roller div:nth-child(3) {
+    animation-delay: -0.108s;
+  }
+  .lds-roller div:nth-child(3):after {
+    top: 71px;
+    left: 48px;
+  }
+  .lds-roller div:nth-child(4) {
+    animation-delay: -0.144s;
+  }
+  .lds-roller div:nth-child(4):after {
+    top: 72px;
+    left: 40px;
+  }
+  .lds-roller div:nth-child(5) {
+    animation-delay: -0.18s;
+  }
+  .lds-roller div:nth-child(5):after {
+    top: 71px;
+    left: 32px;
+  }
+  .lds-roller div:nth-child(6) {
+    animation-delay: -0.216s;
+  }
+  .lds-roller div:nth-child(6):after {
+    top: 68px;
+    left: 24px;
+  }
+  .lds-roller div:nth-child(7) {
+    animation-delay: -0.252s;
+  }
+  .lds-roller div:nth-child(7):after {
+    top: 63px;
+    left: 17px;
+  }
+  .lds-roller div:nth-child(8) {
+    animation-delay: -0.288s;
+  }
+  .lds-roller div:nth-child(8):after {
+    top: 56px;
+    left: 12px;
+  }
+  @keyframes lds-roller {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+
+.box:hover .trash{
+  display: block;
+}
